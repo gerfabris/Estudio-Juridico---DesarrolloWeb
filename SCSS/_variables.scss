@@ -1,0 +1,127 @@
+//tipografia
+$letra__color-p: #1f415b;
+$letra__color-titulos1:#112535;
+$letra-widht1: calc(1.5em + 1.5vw);
+$letra-widht3: calc(1em + 1vw);
+$letra-height1: calc(1.5em + 1.5vh);
+//fondos
+$color-backgraund1: #cdb8e0;
+$color__backgraund2: #8a2be2;
+//logo
+$logo-width:calc(10em + 10vw);
+
+//MAPS
+$colores:(
+    color-p: #1f415b,
+    color-titulos1:#112535, 
+);
+$tamaños:(
+    widht1: calc(1.5em + 1.5vw),
+    widht2: calc(1.6em + 1.6vw),
+    widht3: calc(1em + 1vw),
+    height1: calc(1.5em + 1.5vh),
+    height2: calc(1.6em + 1.6vh),
+    height3: calc(1.2em + 1.2vh),
+);
+$backgrounds:(
+    backgraund1: #cdb8e0,
+    backgraund2: #8a2be2,
+);
+//keyframes
+@keyframes show{
+    0%{
+        transform: translate(-150%);
+    }
+}
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+}
+//Extends
+.main{
+    width: 100%;
+    height: 75%;
+    grid-area: main;
+}
+.flex__ColumnCenterAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex__Center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+    //modalservicios
+.activaModal1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: #333 .2em solid;
+}
+
+.boton-abre1{
+    margin: auto ;
+    background-color: royalblue;
+    color: #fff;
+    text-decoration: none;
+    padding: 3em 3em;
+    border-radius: .4em;
+}
+.modal1{
+    position: fixed;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+}
+
+//Mixins
+@mixin title{
+    color: map-get($map: $colores, $key: color-titulos1);
+    text-align: center;
+    width: 100%;
+    @include margin__Espaciado(1em, 1em)
+}
+
+@mixin fondo__Title($ma, $pa, $bo, $bo-rad){
+    margin: $ma;
+    padding: $pa;
+    border: $bo;
+    border-radius: $bo-rad;
+};
+@mixin margin__Espaciado($ma-t, $ma-b){
+    margin-top: $ma-t;
+    margin-bottom: $ma-b;
+};
+@mixin AltoAncho($w, $h){
+    width: $w;
+    height: $h;    
+};
+@mixin flex__ColumnCenterAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+};
+@mixin flex__Center{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+};
+
+//$ma:margin, $pa:padding, $bo:border, $bo-rad:border-radius)
