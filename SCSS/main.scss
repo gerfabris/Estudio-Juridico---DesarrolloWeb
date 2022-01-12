@@ -221,6 +221,15 @@ footer{
 .contenedor__CardsServ__card-IMG{
     height: 10rem;
 }
+.btn__cards{
+    background-color: map-get($map: $backgrounds, $key: backgraund1);
+    color: map-get($map: $colores, $key: color-titulos1);
+    font-weight: bold;
+    &:hover{
+        background-color: #a168d3;
+        color: white; 
+    }
+}
 .contenedor__CardsServ__card-btnServ{
     margin: 1em;
     background-color: map-get($map: $backgrounds, $key: backgraund1);
