@@ -7,6 +7,7 @@
     <!-- Link  favicon-->
     <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
     <!-- Link animation WOW - Transiciones-->
+    <link rel="stylesheet" href="../js/wow.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -36,14 +37,17 @@
         <!-- Nav Bootstrap-->
         <nav class="navbar navbar-expand-lg navbar-light backgroundcolor">
             <div class="container-fluid">
-                <div class="container container__logo">
+                <!-- Contenedor Logo-->
+                <div class="container header__containerLogo">
                     <a class="navbar-brand " href="../pages/nosotros.html">
-                        <img src="../assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="header__logo">
+                        <img src="../assets/img/LOGO Fabris Fernandez-01-recortado.png" class="header__containerLogo-img">
                     </a>
                 </div>
+                <!-- Nav toggler-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Lista Menú-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -83,39 +87,43 @@
     <!-- Abre Main-->
     <main class="main__Contacto container-fluid"> 
         <!-- Abre Banner-->
-        <div class="container banner">
-            <img src="../assets/img/Portada Facebook.png" class="img-fluid banner-IMG" alt="Banner BLog Estudio Jurídico">
-        </div>
-        <div class="container">
-            <h1 class="h1 h1__Banner">Contáctanos</h1>
-        </div>
+        <section id="bannerContacto" class="container banner">
+            <img src="../assets/img/Portada Facebook.png" class="img-fluid banner-IMG" alt="Banner Estudio Jurídico Fabris Fernández Lafi & Asoc. - Contacto">
+        </section>
+        <section id="titleContacto" class="container">
+            <h1 class="h1 section__titleContacto__h1 wow animate__animated animate__backInLeft">Contáctanos</h1>
+        </section>
         <!-- Cierra Banner-->
         <!-- Abre Formulario-->
-        <div class="container contenedor__form"">
-            <form class="form-config" action="servidor.php" method="post" enctype="">
-                <h2 class="h2 h2__FormularioDatos">Datos de Contacto</h2>
-                <div class="contenedor__formLabels">
-                    <div class="mb-3 separador-leve">
-                        <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" name="mail" placeholder="Ejemplo: ejfabrisfernándezlafi@gmail.com" required><br>
-                    </div>
-                    <div class="mb-3 separador-leve">
-                        <label for="nombre" class="form-label">Nombres</label>
-                        <input type="text" name="nombre" placeholder="Escribe tus nombres" required><br>
-                    </div>
-                    <div class="mb-3 separador-leve">
-                        <label for="apellido" class="form-label">Apellidos</label>
-                        <input type="text" name="apellido" placeholder="Escribe tus apellidos" required><br>
-                    </div>
-                    <div class="mb-3 separador-leve">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="tel" name="telefono" placeholder="+5492612481549"><br>
-                    <div class="mb-3 form-check separador-leve">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+        <section id="formularioContacto" class="container section__formulario"">
+            <form class="section__formulario__contenedor" action="servidor.php" method="post" enctype="">
+                <div class=" section__formulario__contenedor-1">
+                    <h2 class="h2 section__formulario__contenedor__h2">Datos de Contacto</h2>
+                    <div class="section__formulario__contenedor__form">
+                        <div class="mb-3 separador-leve">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input class="section__formulario__contenedor__form-input" type="email" name="mail" placeholder="Ejemplo: ejfabrisfernándezlafi@gmail.com" required><br>
+                        </div>
+                        <div class="mb-3 separador-leve">
+                            <label for="nombre" class="form-label">Nombres</label>
+                            <input class="section__formulario__contenedor__form-input" type="text" name="nombre" placeholder="Escribe tus nombres" required><br>
+                        </div>
+                        <div class="mb-3 separador-leve">
+                            <label for="apellido" class="form-label">Apellidos</label>
+                            <input class="section__formulario__contenedor__form-input" type="text" name="apellido" placeholder="Escribe tus apellidos" required><br>
+                        </div>
+                        <div class="mb-3 separador-leve">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input class="section__formulario__contenedor__form-input" type="tel" name="telefono" placeholder="+5492612481549"><br>
+                        </div>
+                        <div class="mb-3 form-check separador-leve">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+                        </div>
                     </div>
                 </div>
-                <h3 class="h3 section__Contactanos__Formulario__h3">Selecciona el tipo de caso</h3>
+                <div class="section__formulario__contenedor-2">
+                    <h3 class="h3 section__formulario__contenedor__h3">Selecciona el tipo de caso</h3>
                 <select class="form-select separador-leve" name="casos" id="casos">
                     <option value="previsional">Previsional</option>
                     <option value="laboral">Laboral</option>
@@ -128,51 +136,78 @@
                     <label for="consulta" class="form-label">¿Sobre qué te gustaría ver publicaciones? Cuéntanos</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn boton-config separador-leve">Enviar Consulta</button>
+                <button type="submit" class="btn section__formulario__contenedor__boton separador-leve">Enviar Consulta</button>
+                </div>              
             </form>
-        </div>
+        </section>
         <!-- Cierra Formulario-->
         <!-- Abre Seccion Ubicación-->
-        <div class="container section__Contacto__Ubicacion">
-            <h2 class="h2 section__Contacto__Ubicacion__h2">¿Dónde encontrarnos?</h2>
+        <section id="ubicacionContacto" class="container section__Contacto__Ubicacion">
             <div class="contenedor__iframe__Contacto">
+                <h2 class="h2 section__Contacto__Ubicacion__h2">¿Dónde encontrarnos?</h2>
+                <p>
+                    <i class="bi bi-geo-alt"></i> Olegario V. Andrade 315, Mendoza, Argentina
+                </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8745787053654!2d-68.8586003851099!3d-32.90148417693296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090a39c9bbcb%3A0xa2d0f4a092f0413b!2sO.%20V.%20Andrade%20315%2C%20M5500BDO%20Mendoza!5e0!3m2!1ses!2sar!4v1636294490050!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" class="container iframe__Contacto"></iframe>
             </div>
-        </div>
+            <div class="section__formulario__pages">
+                <!-- Ir a nosotros-->         
+                <article id="equipo" class="container section__formulario__pages-contenedor">
+                    <h2 class="h2 section__formulario__pages-h2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">Conocé a nuestro equipo</h2>
+                    <div class="section__formulario__pages-ContainerImg">
+                        <a href="../pages/nosotros.html">
+                            <img class="section__formulario__pages-img" src="../assets/icons/secciones/equipo.png" alt="Nuestro equipo">
+                        </a>
+                    </div>
+                </article>
+                <!-- Ir a blog-->
+                <article id="blog" class="container section__formulario__pages-contenedor">
+                    <h2 class="h2 section__formulario__pages-h2 wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s">Conocé las últimas novedades</h2>
+                    <div class="section__formulario__pages-ContainerImg">
+                        <a href="../pages/blog.html">
+                            <img class="section__formulario__pages-img" src="../assets/icons/secciones/blog.png" alt="Novedades">
+                        </a>
+                    </div>
+                </article>                
+            </div>
+        </section>
         <!-- Cierra Sección Ubicación--> 
+        <!-- Ir al comienzo-->
+        <section id="alComienzo">
+            <a class="container section__index__article-contenedorTop" href="#bannerContacto">
+                <img src="../assets/icons/secciones/top1.png" class="section__index__article-top" alt="Ir al comienzo">
+            </a>  
+        </section>       
     </main>
     <!-- Cierre Main Contacto-->
-    <!-- Apertura SocialBar costado-->
-    <aside>     
-    </aside>
-    <!-- Cierre SocialBar costado-->
     <!-- Abre Footer -->
-    <footer class="">
-        <!-- Footer Logo -->
+    <footer>
+        <!-- Abre footer principal-->
         <div class="container text-center text-md-left">    
-        <!-- Grid row -->
+        <!-- Grid row footer principal -->
             <div class="row">
-                <!-- Grid column -->
+                <!-- Grid column logo -->
                 <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Content -->
-                    <div class="container"> 
+                    <!-- Contenedor footer logo -->
+                    <div class="container">
+                        <!-- Footer Logo -->                         
                         <a class="footer__logo" href="nosotros.html">
-                            <img src="../assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico" class="footer__logo">
+                            <img src="../assets/img/LOGO Fabris Fernandez-01-recortado.png" alt="Logo Estudio Jurídico" class="footer__logo">
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
+                <!-- linea -->
                 <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
+                <!-- Grid column Secciones -->
                 <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 container">
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Secciones</h5>         
+                    <h5 class="font-weight-bold text-uppercase mb-4">Secciones</h5>            
                     <ul class="list-unstyled">
                         <li><p>
                             <a href="../index.html">Inicio</a>
                         </p></li>
                         <li><p>
-                            <a href="./blog.html">Blog | Novedades</a>
+                            <a href="./contacto.html">Blog | Novedades</a>
                         </p></li>
                         <li><p>
                             <a href="./servicios.html">Servicios</a>
@@ -180,11 +215,12 @@
                         <li><p>
                             <a href="./nosotros.html">Sobre Nosotros</a>
                         </p></li>
+
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Contacto-->
                 <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">    
                     <!-- Contact details -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Contacto</h5>    
@@ -204,9 +240,9 @@
                         </p></li>
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Nuestras Redes -->
                 <div class="col-md-2 col-lg-2 text-center mx-auto my-4 footer__redes">
                 <!-- Social buttons -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Nuestras Redes</h5>            
@@ -226,19 +262,21 @@
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
             </div>
-        <!-- Grid row -->   
+        <!-- Cierra Grid row footer principal-->   
         </div>
-        <!-- Footer Links -->    
-        <!-- Copyright -->
-        <div class="container footer-copyright text-center">
+        <!-- Cierra footer principal-->   
+        <!-- Abre Copyright -->
+        <div class="container footer__copyright text-center">
             <a href="#"> Copyright © 2021 Estudio Jurídico Fabris Fernández Lafi</a>
         </div>
-        <!-- Copyright -->  
+        <!-- Cierra Copyright -->
     </footer>
-    <!-- Abre Footer -->
+    <!-- Cierra Footer -->
     <!-- Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Script Wow-->
+    <script src="../js/wow.min.js"></script>
+    <script> new WOW().init();</script>    
 </body>
 </html>

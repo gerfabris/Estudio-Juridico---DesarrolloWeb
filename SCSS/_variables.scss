@@ -8,7 +8,7 @@ $letra-height1: calc(1.5em + 1.5vh);
 $color-backgraund1: #cdb8e0;
 $color__backgraund2: #8a2be2;
 //logo
-$logo-width:calc(10em + 10vw);
+$logo-width:calc(8em + 8vw);
 
 //MAPS
 $colores:(
@@ -90,6 +90,14 @@ $backgrounds:(
 }
 
 //Mixins
+@mixin carousel{
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 120px;
+    max-height: 350px;
+    overflow: hidden;
+}
 @mixin title{
     color: map-get($map: $colores, $key: color-titulos1);
     text-align: center;

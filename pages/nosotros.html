@@ -7,6 +7,7 @@
     <!-- Link  favicon-->
     <link rel="shortcut icon" href="../assets/favicon_io/favicon.ico" type="image/x-icon">
     <!-- Link animation WOW - Transiciones-->
+    <link rel="stylesheet" href="../js/wow.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -30,19 +31,22 @@
     <meta name="theme-color" content="#cdb8e0">    
 </head>
 <body id="grilla__Nosotros">
-<!-- Abre header-->
+    <!-- Abre header-->
     <header>
         <!-- Nav Bootstrap-->
         <nav class="navbar navbar-expand-lg navbar-light backgroundcolor">
             <div class="container-fluid">
-                <div class="container container__logo">
+                <!-- Contenedor Logo-->
+                <div class="container header__containerLogo">
                     <a class="navbar-brand " href="../pages/contacto.html">
-                        <img src="../assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="header__logo">
+                        <img src="../assets/img/LOGO Fabris Fernandez-01-recortado.png" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="header__containerLogo-img">
                     </a>
                 </div>
+                <!-- Nav toggler-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Lista menú-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -80,110 +84,178 @@
     <!-- Cierra header -->
     <!-- Abre Main-->
     <main class="main__Nosotros container-fluid"> 
-        <!-- Apertura Sección Video-->
-        <section class="section__Nosotros container-fluid"> 
-            <div class="section__Nosotros__Video" >   
-                <!-- Video Bucle Presentación-->                    
-                <video src="../assets/video/BUCLE ESTUDIO.mp4" type="video/mp4"  controls autoplay loop muted class="Nosotros__video"></video>
+        <!-- Abre Carousel Banner-->       
+        <section id="carousel-banner" class="container carousel carousel__banner slide" data-bs-ride="carousel">
+            <!-- Abre indicadores del carousel-->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="5" aria-label="Slide 6"></button>                
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="7" aria-label="Slide 8"></button>
             </div>
-        </section> 
-        <!-- Cierre Sección video-->
+            <!-- Cierra indicadores del carousel-->
+            <!-- Abre slides del carousel-->
+            <div class="carousel-inner carousel__banner__slide">
+                <div class="carousel-item active carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/1.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Laboral">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/2.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Previsional">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/3.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho de Familia">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/4.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Sucesiones">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/5.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Civil Daños y Perjuicios">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/6.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Civil Contratos">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/7.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Nuevas Tecnologías">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="../assets/img/carousel/8.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Asesoramiento Empresarial">
+                </div>                 
+            </div>
+            <!-- Cierra slides del carousel-->
+            <!-- Abre botones carousel-->
+            <!-- prev -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Next -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- Cierra botones carousel-->
+        </section>
+        <!-- Cierra Carousel Banner-->
         <!-- Abre sección miembros-->
-        <section class="section__Nosotros container-fluid">
-            <h1 class="h1 section__Nosotros__h2">NUESTROS MIEMBROS</h1>
+        <section id="miembros" class="container-fluid">
+            <h1 class="h1 miembros__h1 wow animate__animated animate__backInLeft">NUESTROS MIEMBROS</h1>
             <!-- Apertura Lista miembros-->
-            <div class="container-fluid contenedor__Nosotros-miembros">
+            <div class="container-fluid miembros__contenedor">
                 <!-- Abre container miembro-->
-                <div class="card Servicio contenedorMiembro" id="germanfabris">
-                    <h4 class="card-title h4 h4__Servicios">Abogado Germán Fabris</h4>
-                    <div class="container container-foto">
-                        <img src="../assets/img/miembros/Foto Perfil americano Fabris.png" alt="Foto Germán Fabris" class="section__Nosotros__img-perfil">                    
+                <article class="card miembros__contenedor__card wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s" id="germanfabris">
+                    <!-- Nombre-->
+                    <h2 class="card-title h4 miembros__contenedor__card-h4">Abogado Germán Fabris</h2>
+                    <!-- Foto -->
+                    <div class="container miembros__contenedor__card__contenedorIMG">
+                        <img src="../assets/img/miembros/Foto Perfil americano Fabris.png" alt="Foto Germán Fabris" class="miembros__contenedor__card__contenedorIMG-img">   
                     </div>
-                    <div class="section__Nosotros__Miembro__ContenedorLink">
-                        <h4 class="h4 section__Nosotros__Miembro__ContenedorLink__h4">Links de contacto</h4>
-                        <ul class="container section__Nosotros__Miembro__ContenedorLink__ul">
-                            <a href="https://www.linkedin.com/in/german-fabris-1054331b8/"><li><img src="../assets/icons/redes/linkedin-byn.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="LinkedInGerman"></li></a>
-                            <a href="https://instagram.com/gerfabris?utm_medium=copy_link"><li><img src="../assets/icons/redes/instagram.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="InstagramInGerman"></li></a>
-                            <a href="https://ggerfabris.medium.com/"><li><img src="../assets/icons/redes/medium.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="MediumInGerman"></li></a>
-                            <a href="mailto:ggerfabris@gmail.com"><li><img src="../assets/icons/redes/gmail.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="MailtoInGerman"></li></a>
-                        </ul>    
+                    <!-- Contenedor links contacto miembro-->
+                    <div class="miembros__contenedor__card__links">
+                        <ul class="container miembros__contenedor__card__links__contacto">
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a href="https://www.linkedin.com/in/german-fabris-1054331b8/"><li><img src="../assets/icons/redes/linkedin-byn.png" class="miembros__contenedor__card__links__icon" alt="LinkedInGerman"></li></a>     
+                            </div>
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a href="https://instagram.com/gerfabris?utm_medium=copy_link"><li><img src="../assets/icons/redes/instagram.png" class="miembros__contenedor__card__links__icon" alt="InstagramInGerman"></li></a>
+                            </div>
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a href="https://ggerfabris.medium.com/"><li><img src="../assets/icons/redes/medium.png" class="miembros__contenedor__card__links__icon" alt="MediumInGerman"></li></a>
+                            </div>
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a href="mailto:ggerfabris@gmail.com"><li><img src="../assets/icons/redes/gmail.png" class="miembros__contenedor__card__links__icon" alt="MailtoInGerman"></li></a>
+                            </div>
+                        </ul>
+                        <h3 class="h5 miembros__contenedor__card__bio__h5">Cofundador del Estudio Jurídico Fabris - Fernández Lafi & Asociados</h3>
+                        <a href="http://wa.me/5492612481549" class="btn miembros__contenedor__card__boton">Contactar</a>
                     </div>
-                    <div class="card-body">
-                        <h5 class="h5 section__Nosotros__Miembro__Bio__h5">Cofundador del Estudio Jurídico Fabris - Fernández Lafi & Asociados</h5>    
-                        <ul class="card-text section__Nosotros__Miembro__Bio__ul">
-                            <li>Abogado 4.0 de la Provincia de Mendoza, Argentina</li>
-                            <li>Emprendedor y desarrollador de proyectos relacionados con las nuevas tecnologías</li>
-                            <li>Diplomado en Nuevas Tecnologías, Estado Inteligente y Derecho Inteligente por la Universidad Champagnat</li>
-                            <li>Estudiante de Programación e Inteligencia Artificial en la Universidad Tecnológica Nacional</li>
-                            <li>Cofundador del Estudio Jurídico Fabris - Fernández Lafi & Asociados</li>
-                            <li>Coordinador de capacitadores en la Universidad Nacional de Cuyo</li>
-                            <li>Miembro de Networking CriptoWorld</li>
-                            <li>Docente y capacitador en el Instituto de Desarrollo Comercial</li>
-                            <li>Participante de la Comisión SubNacional del CEAT de la Universidad de Buenos Aires</li>
-                        </ul>                        
-                        <a href="http://wa.me/5492612481549" class="btn boton-config">Contacto</a>
+                </article>
+                <!-- Cierra container miembro-->
+                <!-- Abre container miembro-->
+                <article class="card miembros__contenedor__card wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s" id="lucianarusso">
+                    <!-- Nombre miembro-->
+                    <h2 class="card-title h4 miembros__contenedor__card-h4">Luciana Inés Russo</h2>
+                    <!-- Foto miembro-->
+                    <div class="container miembros__contenedor__card__contenedorIMG">
+                        <img src="../assets/img/miembros/russo1.png" alt="Foto Germán Fabris" class="miembros__contenedor__card__contenedorIMG-img">                    
                     </div>
-                </div>
-                <!-- Cierra miembro-->
-                <!-- Abre miembro-->
-                <div class="card Servicio contenedorMiembro"  id="lucianarusso">
-                    <h4 class="card-title h4 h4__Servicios">Luciana inés Russo</h4>
-                    <div class="container container-foto">
-                        <img src="../assets/img/miembros/russo1.png" alt="Foto Germán Fabris" class="section__Nosotros__img-perfil">                    
+                    <!-- Contenedor links contacto miembro-->
+                    <div class="miembros__contenedor__card__links">                            
+                        <ul class="container miembros__contenedor__card__links__contacto">
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a class="miembros__contenedor__card__links__icon" href="https://www.linkedin.com/in/luciana-russo-a38391198"><li><img src="../assets/icons/redes/linkedin-byn.png" class="miembros__contenedor__card__links__icon" alt="LinkedInGerman"></li></a>
+                            </div>
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a class="miembros__contenedor__card__links__icon" href="https://instagram.com/lulii.russo?utm_medium=copy_link"><li><img src="../assets/icons/redes/instagram.png" class="miembros__contenedor__card__links__icon" alt="InstagramInGerman"></li></a>
+                            </div>
+                            <div class="miembros__contenedor__card__links__contenedorIcon">
+                                <a class="miembros__contenedor__card__links__icon" href="mailto:lucianainesrusso@gmail.com"><li><img src="../assets/icons/redes/gmail.png" class="miembros__contenedor__card__links__icon" alt="MailtoInGerman"></li></a>
+                            </div>
+                        </ul>
+                        <h3 class="h5 miembros__contenedor__card__bio__h5">Asistente legal del Estudio Jurídico Fabris - Fernández Lafi & Asociados</h3>                        
+                        <a href="http://wa.me/5492612481549" class="btn miembros__contenedor__card__boton">Contactar</a>    
                     </div>
-                    <div class="section__Nosotros__Miembro__ContenedorLink">                            <h4 class="h4 section__Nosotros__Miembro__ContenedorLink__h4">Links de contacto</h4>
-                            <ul class="container section__Nosotros__Miembro__ContenedorLink__ul">
-                            <a href="https://www.linkedin.com/in/luciana-russo-a38391198 "><li><img src="../assets/icons/redes/linkedin-byn.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="LinkedInGerman"></li></a>
-                            <a href="https://instagram.com/lulii.russo?utm_medium=copy_link"><li><img src="../assets/icons/redes/instagram.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="InstagramInGerman"></li></a>
-                            <a href="mailto:lucianainesrusso@gmail.com"><li><img src="../assets/icons/redes/gmail.png" class="section__Nosotros__Miembro__ContenedorLink__icon" alt="MailtoInGerman"></li></a>
-                        </ul>    
-                    </div>
-                    <div class="card-body">
-                        <h5 class="h5 section__Nosotros__Miembro__Bio__h5">Asistente legal del Estudio Jurídico Fabris - Fernández Lafi & Asociados</h5>    
-                        <ul class="card-text section__Nosotros__Miembro__Bio__ul">
-                            <li>Estudiante avanzada de la carrera de abogacía en la Universidad Nacional de Cuyo.</li>
-                        </ul>                        
-                        <a href="http://wa.me/5492612481549" class="btn boton-config">Contacto</a>
-                    </div>
-                </div>
-                <!-- Cierre Miembro-->
+                </article>
+                <!-- Cierre container Miembro-->
             </div>
             <!-- Cierra Lista miembros-->
         </section>
         <!-- Cierra sección miembros-->
         <!-- Abre Seccion Ubicación-->
-        <section class="section__Nosotros container-fluid">
-            <div class="container section__Nosotros__Ubicacion">
-                <h2 class="h2 section__Nosotros__Ubicacion__h2">¿Dónde encontrarnos?</h2>
-                <div class="contenedor__iframe__Nosotros">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8745787053654!2d-68.8586003851099!3d-32.90148417693296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090a39c9bbcb%3A0xa2d0f4a092f0413b!2sO.%20V.%20Andrade%20315%2C%20M5500BDO%20Mendoza!5e0!3m2!1ses!2sar!4v1636294490050!5m2!1ses!2sar" class="iframe__Nosotros" style="border:0;" allowfullscreen="" loading="lazy" class="container iframe__Nosotros"></iframe>
+        <section id="ubicacion" class="container-fluid section__ubicacion">
+            <article class="container ubicacion__contenedor">
+                <h2 class="h2 ubicacion__contenedor__h2 wow animate__animated animate__fadeInLeft">¿Dónde encontrarnos?</h2>
+                <p>
+                    <i class="bi bi-geo-alt"></i> Olegario V. Andrade 315, Mendoza, Argentina
+                </p>
+                <div class="ubicacion__contenedor__contenedorIframe">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.8745787053654!2d-68.8586003851099!3d-32.90148417693296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e090a39c9bbcb%3A0xa2d0f4a092f0413b!2sO.%20V.%20Andrade%20315%2C%20M5500BDO%20Mendoza!5e0!3m2!1ses!2sar!4v1636294490050!5m2!1ses!2sar" class="ubicacion__contenedor__contenedorIframe__iframe" style="border:0;" allowfullscreen="" loading="lazy" class="iframe__Nosotros"></iframe>
                 </div>
-            </div>
+            </article>
+            <!-- Ir a contacto-->
+            <article id="contacto" class="container ubicacion__articleContacto">
+                <h2 class="h2 ubicacion__articleContacto__h2 wow animate__animated animate__fadeInLeft">Haz tu consulta</h2>
+                <div class="ubicacion__articleContacto__ContainerImg">
+                    <a href="../pages/contacto.html">
+                        <img class="ubicacion__articleContacto__img" src="../assets/icons/secciones/contacto.png" alt="Haz tu consulta">
+                    </a>
+                </div>
+            </article>             
         </section>
         <!-- Cierra Sección Ubicación-->
+        <!-- Ir al comienzo-->
+        <section id="alComienzo">
+            <a class="container section__index__article-contenedorTop" href="#carousel-banner">
+                <img src="../assets/icons/secciones/top1.png" class="section__index__article-top" alt="Ir al comienzo">
+            </a>  
+        </section>      
     </main>
     <!-- Cierre Main Nosotros-->
     <!-- Abre Footer -->
-    <footer class="">
-        <!-- Footer Logo -->
+    <footer>
+        <!-- Abre footer principal-->
         <div class="container text-center text-md-left">    
-        <!-- Grid row -->
+        <!-- Grid row footer principal -->
             <div class="row">
-                <!-- Grid column -->
+                <!-- Grid column logo -->
                 <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Content -->
-                    <div class="container"> 
+                    <!-- Contenedor footer logo -->
+                    <div class="container">
+                        <!-- Footer Logo -->                         
                         <a class="footer__logo" href="nosotros.html">
-                            <img src="../assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico" class="footer__logo">
+                            <img src="../assets/img/LOGO Fabris Fernandez-01-recortado.png" alt="Logo Estudio Jurídico" class="footer__logo">
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
+                <!-- linea -->
                 <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
+                <!-- Grid column Secciones -->
                 <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 container">
                     <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Secciones</h5>
+                    <h5 class="font-weight-bold text-uppercase mb-4">Secciones</h5>            
                     <ul class="list-unstyled">
                         <li><p>
                             <a href="../index.html">Inicio</a>
@@ -199,9 +271,9 @@
                         </p></li>
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Contacto-->
                 <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">    
                     <!-- Contact details -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Contacto</h5>    
@@ -221,9 +293,9 @@
                         </p></li>
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Nuestras Redes -->
                 <div class="col-md-2 col-lg-2 text-center mx-auto my-4 footer__redes">
                 <!-- Social buttons -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Nuestras Redes</h5>            
@@ -243,19 +315,21 @@
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
             </div>
-        <!-- Grid row -->   
+        <!-- Cierra Grid row footer principal-->   
         </div>
-        <!-- Footer Links -->    
-        <!-- Copyright -->
-        <div class="container footer-copyright text-center">
+        <!-- Cierra footer principal-->   
+        <!-- Abre Copyright -->
+        <div class="container footer__copyright text-center">
             <a href="#"> Copyright © 2021 Estudio Jurídico Fabris Fernández Lafi</a>
         </div>
-        <!-- Copyright -->
+        <!-- Cierra Copyright -->
     </footer>
     <!-- Cierra Footer -->
     <!-- Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Script Wow-->
+    <script src="../js/wow.min.js"></script>
+    <script> new WOW().init();</script>    
 </body>
 </html>

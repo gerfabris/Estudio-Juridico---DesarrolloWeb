@@ -7,12 +7,11 @@
     <!-- Link  favicon-->
     <link rel="shortcut icon" href="./assets/favicon_io/favicon.ico" type="image/x-icon">
     <!-- Link animation WOW - Transiciones-->
+    <link rel="stylesheet" href="./js/wow.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <!-- Js para aplicar    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    -->
     <!-- link CSS-->
     <link rel="stylesheet" href="./CSS/main.css">
     <!-- Tipografía-->
@@ -29,19 +28,22 @@
     <meta name="theme-color" content="#cdb8e0">
 </head>
 <body id="grilla__Index">
-<!-- Abre header-->
+    <!-- Abre header-->
     <header>
         <!-- Nav Bootstrap-->
         <nav class="navbar navbar-expand-lg navbar-light backgroundcolor">
             <div class="container-fluid">
-                <div class="container container__logo">
+                <!-- Contenedor Logo-->
+                <div class="container header__containerLogo">
                     <a class="navbar-brand" href="./pages/nosotros.html">
-                        <img src="./assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="header__logo">
+                        <img src="./assets/img/LOGO Fabris Fernandez-01-recortado.png" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="header__containerLogo-img">
                     </a>
                 </div>
+                <!-- Nav toggler-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Contenedor Lista Menú-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -79,106 +81,200 @@
     </header>
     <!-- Cierra header -->
     <!-- Abre Main-->
-    <main class="main__Index container-fluid">
-        <!-- Apertura Sección Video--> 
-            <section class="section__Index__ContenedorVideo"> 
-                <!-- Video Bucle Presentación-->
-                <div class="section__Index-video" >  
-                    <video src="assets/video/BUCLE ESTUDIO.mp4" type="video/mp4"  controls autoplay loop muted class="section__video">
-                    </video>
+    <main class="container-fluid main__Index"> 
+        <!-- Abre Carousel Banner-->       
+        <section id="carousel-banner" class="container carousel carousel__banner slide" data-bs-ride="carousel">
+            <!-- Abre indicadores del carousel-->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="5" aria-label="Slide 6"></button>                
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carousel-banner" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            </div>
+            <!-- Cierra indicadores del carousel-->
+            <!-- Abre slides del carousel-->
+            <div class="carousel-inner carousel__banner__slide">
+                <div class="carousel-item active carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/1.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Laboral">
                 </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/2.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Previsional">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/3.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho de Familia">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/4.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Sucesiones">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/5.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Civil Daños y Perjuicios">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/6.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Civil Contratos">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/7.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Nuevas Tecnologías">
+                </div>
+                <div class="carousel-item carousel__banner__slide__containerImg">
+                    <img src="./assets/img/carousel/8.png" class="d-block w-100 carousel__banner__slide__img" alt="Servicios Derecho Asesoramiento Empresarial">
+                </div>                 
+            </div>
+            <!-- Cierra slides del carousel-->
+            <!-- Abre botones carousel-->
+            <!-- prev -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-banner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <!-- Next -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-banner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- Cierra botones carousel-->
+        </section>
+        <!-- Cierra Carousel Banner-->
+        <!-- Abre Sección Servicios-->
+        <section class="conteiner-fluid section__Index"> 
+            <div class="section__Index__servicios" >
+                <!-- Información Servicios: imagen, título, breve descripción-->    
+                <h1 class="h1 section__Index__servicios__h1 wow animate__animated animate__backInLeft">ÁREAS DE ESPECIALIDAD</h1>
+                <!-- Abre Contenedor CardsServs-->
+                <div class="container contenedor__CardsServ">
+                    <!-- CardServ 1 -->
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+                        <img src="./assets/img/servicios flip/laboral.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Laboral</h3>
+                            <a href="./pages/servicios.html#laboral" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 2 -->   
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s">
+                        <img src="./assets/img/servicios flip/previsional.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Previsional</h3>
+                            <a href="./pages/servicios.html#previsional" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 3 -->
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft"  data-wow-delay="1.4s">
+                        <img src="./assets/img/servicios flip/familia.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Familia</h3>
+                            <a href="./pages/servicios.html#familia" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 4 -->   
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+                        <img src="./assets/img/servicios flip/sucesiones.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Sucesiones</h3>
+                            <a href="./pages/servicios.html#sucesiones" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 5 -->
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s">
+                        <img src="./assets/img/servicios flip/civil.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Daños y Perjuicios</h3>
+                            <a href="./pages/servicios.html#civil" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 6 -->   
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="1.4s">
+                        <img src="./assets/img/servicios flip/contratos.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Contratos</h3>
+                            <a href="./pages/servicios.html#contratos" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 7 -->
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
+                        <img src="./assets/img/servicios flip/nuevas-tecnologias.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Nuevas Tecnologías</h3>
+                            <a href="./pages/servicios.html#nuevastecnologias" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>
+                    <!-- CardServ 8 -->   
+                    <article class="contenedor__CardsServ__card bg-light mb-3 rgb wow animate__animated animate__fadeInLeft" data-wow-delay="0.8s">
+                        <img src="./assets/img/servicios flip/empresas.png" class="card-img-top contenedor__CardsServ__card-IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
+                        <div>
+                            <h3 class="h5 contenedor__CardsServ__card-h3">Asesoramiento Empresarial</h3>
+                            <a href="./pages/servicios.html#empresas" class="btn contenedor__CardsServ__card-btnServ boton-config"> Ver más </a>
+                        </div>
+                    </article>                                                                        
+                </div>
+                <!-- Cierre CardsServ-->
+            </div>    
+            <!-- Cierre Información Servicios-->
+        </section> 
+        <!-- Cierre Sección Servicios-->
+        <!-- Abre sección linkeo pages -->
+        <section class="container section__Index">
+            <!-- Ir a contacto-->
+            <article id="contacto" class="container section__index__article">
+                <h2 class="h2 section__index__article-h2 wow animate__animated animate__fadeInLeft">Haz tu consulta</h2>
+                <div class="section__index__article-ContainerImg">
+                    <a href="./pages/contacto.html">
+                        <img class="section__index__article-img" src="./assets/icons/secciones/contacto.png" alt="Haz tu consulta">
+                    </a>
+                </div>
+            </article>   
+            <!-- Ir a nosotros-->         
+            <article id="equipo" class="container section__index__article">
+                <h2 class="h2 section__index__article-h2 wow animate__animated animate__fadeInLeft">Conocé a nuestro equipo</h2>
+                <div class="section__index__article-ContainerImg">
+                    <a href="./pages/nosotros.html">
+                        <img class="section__index__article-img" src="./assets/icons/secciones/equipo.png" alt="Nuestro equipo">
+                    </a>
+                </div>
+            </article>
+            <!-- Ir a blog-->
+            <article id="blog" class="container section__index__article">
+                <h2 class="h2 section__index__article-h2 wow animate__animated animate__fadeInLeft">Conocé las últimas novedades</h2>
+                <div class="section__index__article-ContainerImg">
+                    <a href="./pages/blog.html">
+                        <img class="section__index__article-img" src="./assets/icons/secciones/blog.png" alt="Novedades">
+                    </a>
+                </div>
+            </article>
+            <!-- Ir al comienzo-->
+            <section id="irArriba">
+                <a class="container section__index__article-contenedorTop" href="#carousel-banner">
+                    <img src="./assets/icons/secciones/top1.png" class="section__index__article-top" alt="Ir al comienzo">
+                </a>
             </section>
-            <!-- Cierre Sección video--> 
-            <!-- Apertura Sección Servicios-->
-            <section class="section__Index"> 
-                <div class="section__Index-servicios" >
-                    <!-- Información Servicios: imagen, título, breve descripción-->    
-                    <h1 class="h1 section__Index__Servicios__h1">ÁREAS DE ESPECIALIDAD</h1>
-                    <!-- Abre Contenedor CardsServs-->
-                    <div class="container contenedor__CardsServ">
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/laboral.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Laboral</h3>
-                                <a href="./pages/servicios.html#laboral" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>   
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/previsional.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Previsional</h3>
-                                <a href="./pages/servicios.html#previsional" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/familia.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Familia</h3>
-                                <a href="./pages/servicios.html#familia" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>   
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/sucesiones.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Sucesiones</h3>
-                                <a href="./pages/servicios.html#sucesiones" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/civil.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Daños y Perjuicios</h3>
-                                <a href="./pages/servicios.html#civil" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>   
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/contratos.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Contratos</h3>
-                                <a href="./pages/servicios.html#contratos" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/nuevas-tecnologias.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Nuevas Tecnologías</h3>
-                                <a href="./pages/servicios.html#nuevastecnologias" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>   
-                        <div class="cardServ bg-light mb-3 rgb" style="width: 18rem;">
-                            <img src="./assets/img/servicios flip/empresas.png" class="card-img-top card__IMG" alt="Asesoramiento Empresarial Estudio Jurídico Fabris - Fernandez Lafi">
-                            <div class="cardServ-body">
-                                <h3 class="h5 section__Index-servicios__ul__li__h3">Asesoramiento Empresarial</h3>
-                                <a href="./pages/servicios.html#empresas" class="btn btnServ boton-config"> Ver más </a>
-                            </div>
-                        </div>                                                                        
-                    </div>
-                    <!-- Cierre Contenedor CardsService-->
-                </div>    
-                <!-- Cierre Información Servicios-->
-            </section> <!-- Cierre Sección Servicios-->
+        </section>
+        <!-- Cierra sección linkeo pages -->
     </main>
     <!-- Cierre Main Index-->
     <!-- Abre Footer -->
     <footer>
-        <!-- Footer Logo -->
+        <!-- Abre Footer principal-->
         <div class="container text-center text-md-left">    
-        <!-- Grid row -->
+        <!-- Grid row footer principal-->
             <div class="row">
-                <!-- Grid column -->
+                <!-- Grid column footer logo -->
                 <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Content -->
-                    <div class="container"> 
+                    <!-- Abre contenedor footer logo -->
+                    <div class="container">
+                        <!-- Footer Logo --> 
                         <a class="footer__logo" href="./pages/nosotros.html">
-                            <img src="assets/img/LOGO alargado - Fabris Fernandez Lafi recortado.jpg" alt="Logo Estudio Jurídico" class="footer__logo">
+                            <img src="assets/img/LOGO Fabris Fernandez-01-recortado.png" alt="Logo Estudio Jurídico Fabris - Fernández Lafi & Asoc." class="footer__logo">
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
+                <!-- linea -->
                 <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
+                <!-- Grid column Secciones -->
                 <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1 container">
-                    <!-- Links -->
+                    <!-- Linkeo Secciones-->
                     <h5 class="font-weight-bold text-uppercase mb-4">Secciones</h5>
                     <ul class="list-unstyled">
                         <li><p>
@@ -190,15 +286,14 @@
                         <li><p>
                             <a href="./pages/nosotros.html">Sobre Nosotros</a>
                         </p></li>
-
                         <li><p>
                             <a href="./pages/contacto.html">Contacto</a>
                         </p></li>
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Contacto-->
                 <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">    
                     <!-- Contact details -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Contacto</h5>    
@@ -218,9 +313,9 @@
                         </p></li>
                     </ul>
                 </div>
-                <!-- Grid column -->    
+                <!-- Linea -->    
                 <hr class="clearfix w-100 d-md-none">    
-                <!-- Grid column -->
+                <!-- Grid column Nuestras Redes-->
                 <div class="col-md-2 col-lg-2 text-center mx-auto my-4 footer__redes">
                 <!-- Social buttons -->
                     <h5 class="font-weight-bold text-uppercase mb-4">Nuestras Redes</h5>            
@@ -240,20 +335,22 @@
                         </a>
                     </div>
                 </div>
-                <!-- Grid column -->
             </div>
-        <!-- Grid row -->   
+        <!-- Cierra Grid row footer principal-->   
         </div>
-        <!-- Footer Links -->    
-        <!-- Copyright -->
-        <div class="container footer-copyright text-center">
+        <!-- Cierra footer principal-->    
+        <!-- Abre Copyright -->
+        <div class="container footer__copyright text-center">
             <hr>
             <a href="#"> Copyright © 2021 Estudio Jurídico Fabris Fernández Lafi</a>
         </div>
-        <!-- Copyright -->
+        <!-- Cierra Copyright -->
     </footer>
     <!-- Cierra Footer -->
     <!-- Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Script Wow-->
+    <script src="./js/wow.min.js"></script>
+    <script> new WOW().init();</script>
 </body>
 </html>

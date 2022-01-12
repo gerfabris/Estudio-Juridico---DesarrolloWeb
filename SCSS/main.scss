@@ -101,10 +101,8 @@ header{
         }
     }
 }
-//Modificación navbar Bootstrap
-.container__logo {
-    max-width: 100%;
-}
+
+//Modificación bootstrap navBar
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show > .nav-link{
     color: $letra__color-titulos1;
     font-weight: bold;
@@ -114,11 +112,14 @@ header{
     }
 }
 // Abre config Logo Estudio en header all pages
-.header__logo {
+.header__containerLogo{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header__containerLogo-img{
     width: $logo-width;
     height: 100%;
-    border-radius: 20pt;
-    margin-bottom: 1em;
 }
 // Cierra config Logo Estudio en header all pages
 //Cierra header index and all pages
@@ -138,7 +139,6 @@ footer{
 .footer__logo{
     width: $logo-width;
     height: 100%;
-    border-radius: 20pt;
     margin-bottom: 1em;
 }
 .footer__redes{
@@ -146,7 +146,7 @@ footer{
     text-align: center;
     img{
         width: calc(1.5em + 1.5vw);
-        height: calc(1.5em + 1.5vh);
+        height: calc(1.2em + 1.2vh);
         margin-right: .4em;
         &:hover{
             transition: all 1s;
@@ -167,7 +167,7 @@ footer{
         justify-content: space-evenly
     }
 }
-.footer-copyright{
+.footer__copyright{
     @include margin__Espaciado(1em,1em);
 }
 //Cierra footer MobileFirst  index and all pages
@@ -177,47 +177,27 @@ footer{
     @extend .main;
 }
 //Cierra config main 'index' 
-//Abre config section video 'index' MF
-.section__Index-video{
-    display: flex; 
-    justify-content: center ;
-    width: 95%;
-    @include margin__Espaciado(0em,1em);
-}
-.section__video{
-    max-width: 88%;
-    height: 100%;
-}
-//cierra config section video 'index' MF
 //Abre section servicios 'index' MF
-.section__Index-servicios{
+.section__Index__servicios{
     @extend .flex__ColumnCenterAll;
     justify-content: space-around;
     width: 100%;
 }
-.section__Index__Servicios__h1{
+.section__Index__servicios__h1{
     @include title;
-}
-
-.section__Index-servicios__ul__li__h3{
-    margin: .2em;
-    font-weight: bold;
-    font-size: map-get($map: $tamaños, $key: widht3);
-    color: map-get($map: $colores, $key: color-p );
-    text-align: center;
-    @include margin__Espaciado(1em,0);
 }
 //cardsIndex
 .contenedor__CardsServ{
         @include margin__Espaciado(1em,1em);
         @extend .flex__ColumnCenterAll;
 }
-.cardServ{
+.contenedor__CardsServ__card{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 23rem;
+        width: 14rem;
+        height: 20rem;
         border-radius: 10pt;
         background: white;
         box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -230,65 +210,108 @@ footer{
         box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
         }
 }
-.card__IMG{
-    height: 13rem;
+.contenedor__CardsServ__card-h3{
+    margin: .2em;
+    font-weight: bold;
+    font-size: map-get($map: $tamaños, $key: widht3);
+    color: map-get($map: $colores, $key: color-p );
+    text-align: center;
+    @include margin__Espaciado(1em,0);
 }
-.btnServ{
+.contenedor__CardsServ__card-IMG{
+    height: 10rem;
+}
+.contenedor__CardsServ__card-btnServ{
         margin: 1em;
 }
 //cierra cardsIndex
 //Cierra section servicios 'index' MF
+//abre Seccion 'index' articulos pages
+.section__index__article{
+    border-top: #1f415b solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    @include margin__Espaciado(4em,1em);
+}
+.section__index__article-h2{
+    color: map-get($map: $colores, $key: color-titulos1);
+}
+
+.section__index__article-ContainerImg{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include margin__Espaciado(1em,0em);
+}
+.section__index__article-img{
+    width: 90%;
+    &:hover{
+        transition: all .2s;
+        width: 100%;
+    }
+}
+.section__index__article-contenedorTop{
+    @include flex__Center;
+    width: 50px;
+}
+.section__index__article-top{
+    width: 30px;
+}
+//cierra Seccion 'index' Articulo Equipo
 //Abre Estilo Main BLOG Mobile First
 .main__Blog{
     @extend .main;
 }
-.main__Blog__Seccion-Articulos{
-    @extend .flex__ColumnCenterAll;
-    align-items: center;
-}
-//Blog Banner 'blog'
+// Abre Blog y Servicios Banner 'blog'
 .banner{
     @extend .flex__Center;
     width: 100%;
     padding: 0;
-}
-.h1__Banner{
-    @include title;
-    text-transform: uppercase;
 }
 .banner-IMG{
     max-width: 100%;
     height: 100%;
     width: 100%;
 }
-//Sección Publicaciones 'blog'
-.main__Blog__Seccion-Articulos-a{
+// cierra Blog y Servicios Banner 'blog'
+//abre Sección publicaciones 'blog'
+.blog__section__publicaciones{
+    @extend .flex__ColumnCenterAll;
+    align-items: center;
+}
+.blog__section__publicacion{
+    @include margin__Espaciado(1em,1em);
+    @extend .flex__ColumnCenterAll;
+    width: 100%;
+}
+.blog__section__publicaciones-h1{
+    @include title;
+    text-transform: uppercase;
+}
+.blog__section__publicaciones-a{
     text-decoration: none;
     color: map-get($map: $colores, $key: color-titulos1);
 }
-.contenedor-articulo{
-    @include margin__Espaciado(1em,1em);
-    @extend .flex__ColumnCenterAll;
-}
-.card-width{
-    height: 25rem;
+.blog__section__publicaciones-card{
+    width: 14rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.container__Articulos-IMG{
+.blog__section__publicaciones__containerIMG{
     width: 100%;
-    height: 14rem;
+    height: 10rem;
     overflow: hidden;
 }
-.Articulos-IMG{
+.blog__section__publicaciones__containerIMG-IMG{
     width: 100%;
     height: 100%;
     transition: all 500ms ease;
@@ -297,31 +320,93 @@ footer{
         cursor: pointer;
     }
 }
+.blog__section__publicaciones-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.blog__section__publicaciones-cardTitle{
+    text-align: center;
+}
+.blog__section__publicaciones-cardText{
+    @include margin__Espaciado(.5em,1em);
+}
+.blog__section__publicaciones__boton{
+    background-color: map-get($map: $backgrounds, $key: backgraund1);
+    color: map-get($map: $colores, $key: color-titulos1);
+    font-weight: bold;
+    &:hover{
+        background-color: #a168d3;
+        color: white; 
+    }
+}
+.card-text:last-child {
+    margin-bottom: 1em;
+}
+//Sección 2 'blog' MF
+.blog__section__contenedor{
+    @include flex__ColumnCenterAll;
+    @include margin__Espaciado(2em,2em);
+}
 //Formulario 'blog'
-.h2__Formulario{
+.blog__section__contenedor__formulario{
+    border-top: #1f415b solid 2px;
+}
+.blog__section__contenedor__formulario-h2{
     @include margin__Espaciado(2em,2em);
     @include title;
+}
+//Article Contacto 'blog'
+.blog__section__contenedor__article{
+    border-top: #1f415b solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    @include margin__Espaciado(4em,1em);
+}
+.blog__section__contenedor__article-ContainerImg{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include margin__Espaciado(1em,0em);
+}
+.blog__section__contenedor__article-ContainerImg-img{
+    width: 90%;
+    &:hover{
+        transition: all .2s;
+        width: 100%;
+    }
+}
+.blog__contenedorTop{
+    @include flex__Center;
+    width: 50px;
+}
+.blog__contenedorTop-img{
+    width: 30px;
 }
 //Cierra Main Mobile First 'Blog'
 //Abre Main Mobile First 'Servicios'
 .main__Servicios{
     @extend .main; 
 }
-.contenedor-servicio{
-    @include margin__Espaciado(2em,2em);
-    @extend .flex__ColumnCenterAll;
-}
-.h1__Banner{
+//Abre Cards Flip "Servcios"
+.servicios__section-h1{
     @include title;
 }
-//Abre Cards Flip "Servcios"
-.container__servicios{
+.section__cardsFlip{
+    @include margin__Espaciado(2em,2em);
     @include flex__ColumnCenterAll;
 }
-.container__flip{
+.section__cardsFlip__container__flip{
     position: relative;
-    width: 18rem;
-    height: 25rem;
+    width: 14rem;
+    height: 20rem;
     @include margin__Espaciado(1em,2em);
     perspective: 1000px;
     transform-style: preserve-3d;
@@ -347,9 +432,8 @@ footer{
     backface-visibility: hidden;
     transform: rotateY(0deg);
     transform-style: preserve-3d;
-    transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);  
+    transition: 1.5s cubic-bezier(0.4, 0.2, 0.2, 1);  
     overflow: auto;
-
 }
 .front__flip{
     transform: rotateY(0deg);
@@ -357,24 +441,24 @@ footer{
 }
 .back__flip{
     transform: rotateY(180deg);
-    padding: 10px;
+    padding: .5em;
 }
-.card-text{
+.card__flip-text{
     text-align: justify;
-    font-size: .9em;
+    font-size: .7em;
 }
-.Servicios-IMG{
+.card__flip-IMG{
     width: 100%;
-    height: 14rem;
+    height: 10rem;
 }
-.h5__Servicios{
+.card__flip-h5{
     text-align: center;
     margin-top: .5em;
     margin-bottom: .5em;
     color: $letra__color-p;
     font-weight: bold;
 }
-.boton-config{
+.card__flip-boton{
     background-color: map-get($map: $backgrounds, $key: backgraund1);
     color: map-get($map: $colores, $key: color-titulos1);
     font-weight: bold;
@@ -383,144 +467,168 @@ footer{
         color: white; 
     }
 }
-.boton-configCirculo{
+.card__flip-botonCirculo{
     background-color: map-get($map: $backgrounds, $key: backgraund1);
     color: map-get($map: $colores, $key: color-titulos1);
     font-weight: bold;
     border-radius: 15pt;
     cursor: pointer;
 }
-//Cierra Cards Flip "Servicios"
-//Cierra Main Mobile First 'Servicios'
-//Abre Main Mobile First 'NOSOTROS'
+//Cierra Cards Flip "Servicios" MF
+//Cierra Main Mobile First 'Servicios' MF
+//Abre Main Mobile First 'NOSOTROS' MF
 .main__Nosotros{
     @extend .main;
 }
-.section__Nosotros{
-    padding: .1em;
-    margin: .1em;
-}
-// Sección video 'nosotros'
-.section__Nosotros__Video {
-    @extend .flex__Center;
-    width: 95%;
-    @include margin__Espaciado(0em,0);
-}
-.Nosotros__video{
-    max-width: 88%;
-    height: 100%;
-}
-//Sección Miembros 'nosotros'
-.contenedor__Nosotros-miembros{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-}
-.section__Nosotros__h2{
+//Sección Miembros 'nosotros' MF
+.miembros__h1{
     @include title;
     @include margin__Espaciado(1em,1em);
 }
-.h4__Servicios{
-    text-align: center;
-    @include margin__Espaciado(1em,1em);
-    color: map-get($map: $colores, $key: color-titulos1);
+.miembros__contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.section__Nosotros__ul__ContenedorMiembro{
-    @extend .flex__ColumnCenterAll;
-}
-.contenedorMiembro{
+.miembros__contenedor__card{
     @include margin__Espaciado(1em,1em);
     width: 90%;
     border-radius: 20px;
     box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
     transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    justify-content: space-evenly;
+    padding: .5em;
 }
+.miembros__contenedor__card-h4{
+    text-align: center;
+    @include margin__Espaciado(1em,1em);
+    color: map-get($map: $colores, $key: color-titulos1);
+}
+.miembros__contenedor__card__contenedorIMG{
+    @extend .flex__Center;
+}
+.miembros__contenedor__card__contenedorIMG-img{
+    max-width: 300px;
+    max-height: 300px;
+    width: 80%;
+}
+.miembros__contenedor__card__bio__h5{
+    text-align: center;
+    @include margin__Espaciado(1em,1em);
+    color: map-get($map: $colores, $key: color-p);
+}
+//modificación boostrap
 ol{
     ul{
     padding-left: 0;
     }
 }
-.container-foto{
-    @extend .flex__Center;
-}
-.section__Nosotros__img-perfil{
-    max-width: 300px;
-    max-height: 300px;
-    width: 80%;
-}
-.section__Nosotros__Miembro__Bio__ul{
-    list-style-type: none;
-    align-items:flex-start;
-    color: map-get($map: $colores, $key: color-p);
-}
-.section__Nosotros__Miembro__Bio__h5{
-    text-align: center;
-    @include margin__Espaciado(1em,1em);
-    color: map-get($map: $colores, $key: color-p);
-}
-.section__Nosotros__Miembro__ContenedorLink__ul {
-    max-width: 400px;
-}
-//Abre contenedor link miembro 'Nosotros'
-.section__Nosotros__Miembro__ContenedorLink{
+//Biografía miembros 'nosotros' MF
+//Abre contenedor link contacto 'Nosotros' MF
+.miembros__contenedor__card__links{
     @extend .flex__ColumnCenterAll;
     @include margin__Espaciado(0,1em);
 }
-.section__Nosotros__Miembro__ContenedorLink__h4{
-    text-align: center;
-    @include margin__Espaciado(.5em,0);
-    color: map-get($map: $colores, $key: color-titulos1);
-}
-.section__Nosotros__Miembro__ContenedorLink__icon{
-    @include margin__Espaciado(.5em,.5em);
-    width: map-get($map: $tamaños, $key: widht1);
-    height: map-get($map: $tamaños, $key: height1);
-    &:hover{
-        transition: all .2s;
-        width: map-get($map: $tamaños, $key: widht2);
-        height: map-get($map: $tamaños, $key: height2);
-    }
-}
-.section__Nosotros__Miembro__ContenedorLink__ul{
+
+.miembros__contenedor__card__links__contacto{
     list-style: none;
     margin: .1em;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 90%;
+    max-width: 400px;
+}
+.miembros__contenedor__card__links__contenedorIcon{
+    @include margin__Espaciado(1em,1em);
+    @include flex__Center;
+    width: 30px;
+    height: 30px;
+}
+.miembros__contenedor__card__links__icon{
+    width: 90%;
+    height: 90%;
+    &:hover{
+        transition: all .2s;
+        width: 100%;
+        height: 100%;
+    }
+}
+.miembros__contenedor__card__boton{
+    background-color: map-get($map: $backgrounds, $key: backgraund1);
+    color: map-get($map: $colores, $key: color-titulos1);
+    font-weight: bold;
+    &:hover{
+        background-color: #a168d3;
+        color: white; 
+    }
 }
 //Cierra contenedor link 'nosotros'
 //Iframe Ubicación 'nosotros'
-.section__Nosotros__Ubicacion{
-    @extend .flex__ColumnCenterAll;
+.section__ubicacion{
+    @include flex__ColumnCenterAll;
 }
-.section__Nosotros__Ubicacion__h2{
+.ubicacion__contenedor{
+    @extend .flex__ColumnCenterAll;
+    text-align: center;
+    color: map-get($map: $colores, $key: color-p)
+}
+.ubicacion__contenedor__h2{
     @include title;
     @include margin__Espaciado(1em,1em);
 }
 //iframe "nosotros"
-.contenedor__iframe__Nosotros{
+.ubicacion__contenedor__contenedorIframe{
     @include margin__Espaciado(1em,2em);
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
-.iframe__Nosotros{   
+.ubicacion__contenedor__contenedorIframe__iframe{   
     width: 90%;
     height: 100%;
     max-width: 500px;
     max-height: 500px;
+}
+.ubicacion__articleContacto{
+    border-top: #1f415b solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    @include margin__Espaciado(4em,1em);
+}
+.ubicacion__articleContacto__h2{
+    color: map-get($map: $colores, $key: color-titulos1);
+}
+.ubicacion__articleContacto__ContainerImg{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include margin__Espaciado(1em,0em);
+}
+.ubicacion__articleContacto__img{
+    width: 90%;
+    &:hover{
+        transition: all .2s;
+        width: 100%;
+    }
 }
 //Cierra Responsive Mobile First Main 'Nosotros'
 //Abre Media Main 'CONTACTO'
 .main__Contacto{
     @extend .main;
 }
-
-.contenedor__form{
+.section__titleContacto__h1{
+    @include title;
+}
+.section__formulario{
     border-radius: 20px;
     box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
     transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -528,25 +636,34 @@ ol{
     @include flex__ColumnCenterAll;
     @include margin__Espaciado(1em,2em);
 }
-.form-config{
+.section__formulario__contenedor{
     color: map-get($map: $colores, $key: color-p);
     width: 80%;
     @include flex__ColumnCenterAll;
 }
-.contenedor__formLabels{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.h2__FormularioDatos{
+.section__formulario__contenedor__h2{
     text-align: center;
     @include margin__Espaciado(1em,1em);
     color: map-get($map: $colores, $key: color-titulos1);
 }
-.section__Contactanos__Formulario__h3{
+.section__formulario__contenedor__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section__formulario__contenedor__h3{
     text-align: left;
     @include margin__Espaciado(1em,1em);
     color: map-get($map: $colores, $key: color-p);
+}
+.section__formulario__contenedor__boton{
+    background-color: map-get($map: $backgrounds, $key: backgraund1);
+    color: map-get($map: $colores, $key: color-titulos1);
+    font-weight: bold;
+    &:hover{
+        background-color: #a168d3;
+        color: white; 
+    }
 }
 .separador-leve{
     @include margin__Espaciado(.5em,.5em);
@@ -569,10 +686,11 @@ ol{
 }
 .contenedor__iframe__Contacto{
     @include margin__Espaciado(1em,2em);
+    text-align: center;
+    color: map-get($map: $colores, $key: color-p);
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
+    @include flex__ColumnCenterAll
 }
 .iframe__Contacto{   
     width: 90%;
@@ -580,11 +698,79 @@ ol{
     max-width: 500px;
     max-height: 500px;
 }
+//complemento linkeo pages
+.section__formulario__pages{
+    @include flex__ColumnCenterAll;
+}
+.section__formulario__pages-contenedor{
+    border-top: #1f415b solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    @include margin__Espaciado(4em,1em);
+}
+.section__formulario__pages-h2{
+    color: map-get($map: $colores, $key: color-titulos1);
+}
+
+.section__formulario__pages-ContainerImg{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include margin__Espaciado(1em,0em);
+}
+.section__formulario__pages-img{
+    width: 90%;
+    &:hover{
+        transition: all .2s;
+        width: 100%;
+    }
+}
 //Cierra Responsive MF Main 'Contacto'
+//MediaQuerie Responsive Screen +360px
+//'index' +360px
+@media screen and (min-width: 360px){
+    //index
+    .contenedor__CardsServ__card{
+        width: 18rem;
+        height: 23rem;
+    }
+    .contenedor__CardsServ__card-IMG{
+        height: 13rem;
+    }
+    //cierra 'index' +360px
+    //abre 'blog' +360px
+    .blog__section__publicaciones-card{
+        width: 18rem;
+        height: 25rem;
+    }
+    .blog__section__publicaciones__containerIMG{
+        height: 13rem;
+    }
+    //cierra 'blog' +360px
+    //abre 'servicios' +360px
+    .section__cardsFlip__container__flip{
+        width: 18rem;
+        height: 25rem;
+    }
+    .card__flip-IMG{
+        height: 14rem;
+    }
+    .card__flip-text{
+    text-align: justify;
+    font-size: .8em;
+    }
+}
+//Cierra MediaQuerie Responsive Screen +360px
 //MediaQuerie Responsive Screen +500px
 //Modifiación logo para menú hamburguesa a la derecha
 @media screen and (min-width: 500px){
-    .container__logo {
+    .header__containerLogo{
         max-width: 50%;
     }
 }
@@ -592,17 +778,44 @@ ol{
 //MediaQuerie Responsive Screen +768px
     //Abre Media Main Index +768px
 @media screen and (min-width: 768px){
-    //abre nav header all pages
-    .container__logo {
+    //abre nav header all pages +768px
+    .header__containerLogo{
         max-width: 50%;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1rem;
         padding-left: 1rem;
     }
-    //cierre nav header all pages
-    //Main 'index'
-    .section__Index-servicios {
+    //cierre nav header all pages +768px
+    //abre Main 'index' +768px
+    //Abre carousel 'index' +768px
+    .carousel__banner{
+        @include carousel;
+    }
+    .carousel__banner__slide{
+        @include carousel;
+    }
+    .carousel__banner__slide__containerImg{
+        @include carousel;
+    }
+    .carousel__banner__slide__img{
+        @include carousel;
+    }
+    //Cierra carousel 'index' +768px
+    //CardsServ 'Index' +768px
+    .contenedor__CardsServ{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly
+    }
+    .contenedor__CardsServ__card{
+        @include margin__Espaciado (2em,2em);
+        margin-left: 1em;
+        margin-right: 2em;
+    }
+    // cierra CardsServ 'Index' +768px
+    //Abre Sección Servicios 'index' +768px
+    .section__Index__servicios {
         @include flex__ColumnCenterAll;
         justify-content: space-around;
         width: 100%;
@@ -610,15 +823,42 @@ ol{
     .section__Index__Servicios__h1{
         font-size: map-get($map: $tamaños, $key: widht1);
     }
-    .section__Index-servicios__ul__li__h3{
+    .contenedor__CardsServ__card-h3{
         font-weight: bold;
         font-size: map-get($map: $tamaños, $key: widht3);
         text-align: center;
         @include margin__Espaciado(1em,0);
     }
-    //Main 'Servicios'
+    //cierra sección servicios 'index' +768px
+    //cierra 'index' +768px
+    //Abre blog +768px
+    .blog__section__publicaciones{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .blog__section__publicacion{
+        width: 18rem;
+    }
+    .blog__section__contenedor{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .blog__section__contenedor__formulario{
+        width: 45%;
+        border-top: none;
+    }
+    .blog__section__contenedor__article{
+        border-top: none;
+        border-left: #1f415b solid 2px;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        width: 45%;
+    }
+    //Cierra 'blog' +768px    
+    //Abre 'Servicios' +768px
     // cambio dirección servicios
-    .container__servicios{
+    .section__cardsFlip{
         @include margin__Espaciado(2em,2em);
         display: flex;
         flex-direction: row;
@@ -628,42 +868,75 @@ ol{
         width: 100%;
     }
     //Cierra Media Main 'index' +768px
-    //Abre Media Main 'Blog' +768px
-    .main__Blog__Seccion-Articulos{
-        @include flex__ColumnCenterAll;
-        @include margin__Espaciado(1em,2em);
-    }
-    //Cierra Media Main BLog +768px
     //Abre Media Main Nosotros +768px
-    .contenedor__Nosotros-miembros{
-        display: flex;
-        flex-direction: column;
+    .miembros__contenedor{
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: center;
     }
-    .contenedorMiembro{
-        width: 70%;
+    .miembros__contenedor__card{
+        width: 40%;
     }
-    .section__Nosotros__Miembro__ContenedorLink__ul{
+    .miembros__contenedor__card__links{
         justify-content: space-evenly;
         @include margin__Espaciado(1em,.5em);
     }
-    .section__Nosotros__Miembro__Bio__ul{
+    .miembros__contenedor__card__bio{
         @include margin__Espaciado(1.5em,1.5em)
     }
+    .miembros__contenedor__card__links__contenedorIcon{
+        width: 40px;
+        height: 40px;
+    }
+    .section__ubicacion{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .ubicacion__contenedor{
+        width: 50%;
+    }
+    .ubicacion__articleContacto{
+        width: 50%;
+    }
     //Cierra Media Main Nosotros +768px
+    //abre 'contacto' +768px
+    .section__formulario__contenedor__form{
+        align-items: baseline;
+    }
+    .section__formulario__contenedor__form-input{
+        width: 18rem;
+    }
+    .section__Contacto__Ubicacion{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .contenedor__iframe__Contacto{
+        width: 60%;
+        height: 100%;
+        margin-right: 1em;
+    }
+    .section__formulario__pages{
+        width: 40%;
+    }
+    .section__formulario__pages-contenedor{
+        width: 100%;
+        padding: 0em;
+        margin-top: 2em;
+        margin-bottom: 0em;
+        border-top: none;
+    }
+    //cierra 'contacto' +768px
     //Footer Media Responsive all pages +768px
     .footer__logo{
         width: calc(8em + 8vw);
         height: 100%;
-        border-radius: 20pt;
     }
     .footer__redes{
         justify-content: flex-start;
         img{
-            width: map-get($map: $tamaños, $key: widht3);
-            height: map-get($map: $tamaños, $key: height3);
+            width: calc(1.3em + 1.3vw);
         }
         .socialMedia{
             @include flex__ColumnCenterAll;
@@ -675,7 +948,50 @@ ol{
     //CIerra Footer Media +768px
 }
 //Cierra media responsive +768px
-//Abre Media Responsive +1200px
+//Abre media responsive +992px
+@media screen and (min-width: 992px){
+    //abre Main 'index' +992px
+    //Abre carousel 'index' +992px
+    .carousel__banner{
+        max-height: 400px;
+    }
+    .carousel__banner__slide{
+        max-height: 400px;
+    }
+    .carousel__banner__slide__containerImg{
+        max-height: 400px;
+    }
+    .carousel__banner__slide__img{
+        max-height: 400px;
+    }
+    //Cierra carousel 'index' +992px
+    //cierra main 'index' +992px
+    //abre 'contacto' +992px
+    .section__formulario__contenedor{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items:baseline;
+        justify-content: space-evenly;
+    }
+    .section__formulario__contenedor-1{
+        width: 50%;
+        margin-right: 2em;
+    }
+    .section__formulario__contenedor-2{
+        width: 50%;
+    }
+    .section__formulario__contenedor__h2{
+        text-align: left;
+        @include margin__Espaciado(1em,1em);
+        color: map-get($map: $colores, $key: color-p);
+    }
+    .form-control{
+        height: 12rem;
+    }
+    //cierra 'contacto'+992px
+}
+//Abre media responsive +992px
+//Cierra Media Responsive +1200px
 @media screen and (min-width: 1200px){
     //Abre Media +1200 header todas las paginas
     .container__logo{
@@ -685,74 +1001,36 @@ ol{
     }
     //Cierra Media +1200 header todas las paginas
     //Abre Media Main Index +1200px
-    .section__Index-video {
-        @include flex__Center;
-        width: 100%;
-        @include margin__Espaciado(1em,1em);
+    //Abre carousel 'index' +1200px
+    .carousel__banner{
+        max-height: 450px;
+        max-width: 80%;
     }
-    //CardsServ
-    .cardServ{
-        @include margin__Espaciado (2em,2em);
-        margin-left: 2em;
+    .carousel__banner__slide{
+        max-height: 450px;
+    }
+    .carousel__banner__slide__containerImg{
+        max-height: 450px;
+    }
+    .carousel__banner__slide__img{
+        max-height: 450px;
+    }
+    .contenedor__CardsServ__card{
         margin-right: 2em;
     }
-    .contenedor__CardsServ{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    //
+    // cierra CardsServ 'Index'
     //Cierra Media Main 'Index' +1200px
-    //Abre Media Main 'Blog' +1200px
-    .main__Blog__Seccion-Articulos{
-        @include flex__Center;
-        flex-direction: row;
-        @include margin__Espaciado(1em,2em);
-    }
-    .Articulos-IMG{
-        max-width: 100%;
-    }
-    //Cierra Media Main 'BLog' +1200px
     //Abre Media 'Servicios' +1200px
-    .container__servicios{
+    .section__cardsFlip{
         @include margin__Espaciado(1em,1em);
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .container__flip{
+    .section__cardsFlip__container__flip{
         @include margin__Espaciado(1em,2em);
     }
     //Cierra Media 'Servicios' +1200px
-    //Abre Media 'Nosotros' +1200px
-    .contenedor__Nosotros-miembros{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: center;
-    }
-    .contenedorMiembro{
-        width: 40%;
-    }
-    .section__Nosotros__Miembro__ContenedorLink__icon{
-        width: calc(1.2em + 1.2vw);
-        height: map-get($map: $tamaños, $key: height1);
-    }
-    .section__Nosotros__Miembro__Bio__h5{
-        margin-top: 0;
-    }
-    //Cierra Media 'Nosotros' +1200px
     //Abre Media 'Contacto' +1200px
-    .containerGeneral__formContacto{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    .container__formContacto-1{
-        width: 45%;
-    }
-    .container__formContacto-2{
-        width: 45%;
-    }
     .iframe__Contacto{
         max-width: 60%;
     }
