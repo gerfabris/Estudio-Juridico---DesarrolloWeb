@@ -56,39 +56,6 @@ $backgrounds:(
     align-content: center;
     align-items: center;
 }
-    //modalservicios
-.activaModal1{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border: #333 .2em solid;
-}
-
-.boton-abre1{
-    margin: auto ;
-    background-color: royalblue;
-    color: #fff;
-    text-decoration: none;
-    padding: 3em 3em;
-    border-radius: .4em;
-}
-.modal1{
-    position: fixed;
-    background-color: #333;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-
-    --opacity: 0;
-    --pointer: none;
-
-    opacity: var(--opacity);
-    pointer-events: var(--pointer);
-    transition: opacity .5s;
-}
-
 //Mixins
 @mixin carousel{
     width: 100%;
@@ -104,7 +71,6 @@ $backgrounds:(
     width: 100%;
     @include margin__Espaciado(1em, 1em)
 }
-
 @mixin fondo__Title($ma, $pa, $bo, $bo-rad){
     margin: $ma;
     padding: $pa;
