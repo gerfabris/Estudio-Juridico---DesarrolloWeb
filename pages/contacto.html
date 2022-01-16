@@ -100,41 +100,45 @@
                 <div class=" section__formulario__contenedor-1">
                     <h2 class="h2 section__formulario__contenedor__h2">Datos de Contacto</h2>
                     <div class="section__formulario__contenedor__form">
-                        <div class="mb-3 separador-leve">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input class="section__formulario__contenedor__form-input" type="email" name="mail" placeholder="Ejemplo: ejfabrisfernándezlafi@gmail.com" required><br>
+                        <div class="mb-3 separador-leve form-ajustes">
+                            <label for="email" class="form-label">Email</label>
+                            <input class="section__formulario__contenedor__form-input" type="email" name="mail" placeholder="Ejemplo: ejfabrisfernándezlafi@gmail.com" id="correo" required><br>
                         </div>
-                        <div class="mb-3 separador-leve">
+                        <div class="mb-3 separador-leve form-ajustes">
                             <label for="nombre" class="form-label">Nombres</label>
                             <input class="section__formulario__contenedor__form-input" type="text" name="nombre" placeholder="Escribe tus nombres" required><br>
                         </div>
-                        <div class="mb-3 separador-leve">
+                        <div class="mb-3 separador-leve form-ajustes">
                             <label for="apellido" class="form-label">Apellidos</label>
                             <input class="section__formulario__contenedor__form-input" type="text" name="apellido" placeholder="Escribe tus apellidos" required><br>
                         </div>
-                        <div class="mb-3 separador-leve">
+                        <div class="mb-3 separador-leve form-ajustes">
                             <label for="telefono" class="form-label">Teléfono</label>
                             <input class="section__formulario__contenedor__form-input" type="tel" name="telefono" placeholder="+5492612481549"><br>
                         </div>
                         <div class="mb-3 form-check separador-leve">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label class="form-check-label" for="formCheck">Acepto los términos y condiciones</label>
                         </div>
                     </div>
                 </div>
                 <div class="section__formulario__contenedor-2">
                     <h3 class="h3 section__formulario__contenedor__h3">Selecciona el tipo de caso</h3>
                 <select class="form-select separador-leve" name="casos" id="casos">
-                    <option value="previsional">Previsional</option>
                     <option value="laboral">Laboral</option>
+                    <option value="previsional">Previsional</option>
                     <option value="familia">Familia</option>
-                    <option value="civil">Civil</option>
+                    <option value="familia">Sucesiones</option>
+                    <option value="civil">Daños y Perjuicios</option>
+                    <option value="familia">Accidentes de tránsito</option>
+                    <option value="familia">Contratos</option>
                     <option value="sociedades">Nuevas Tecnologías</option>
+                    <option value="familia">Asesoramiento Empresarial</option>
                     <option value="otro">Otro</option>
                 </select>
                 <div class="mb-3 separador-leve">
                     <label for="consulta" class="form-label">¿Sobre qué te gustaría ver publicaciones? Cuéntanos</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="mensaje" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn section__formulario__contenedor__boton separador-leve">Enviar Consulta</button>
                 </div>              

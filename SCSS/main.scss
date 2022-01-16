@@ -91,6 +91,9 @@ header{
                     }
                     a{
                         &:hover{
+                            -moz-transition: all .1ms;
+                            -webkit-transition: all .1ms;
+                            -o-transition: all .1ms;
                             transition: all .1ms;
                             background-color: #a168d3;
                             border-radius: 5pt;
@@ -107,6 +110,9 @@ header{
     color: $letra__color-titulos1;
     font-weight: bold;
     &:hover{
+        -moz-transition: all .1s;
+        -webkit-transition: all .1s;
+        -o-transition: all .1s;
         transition: .1s all;
         color: #ffff;
     }
@@ -149,13 +155,22 @@ footer{
         height: calc(1.2em + 1.2vh);
         margin-right: .4em;
         &:hover{
+            -moz-transition: all .1s;
+            -webkit-transition: all .1s;
+            -o-transition: all .1s;
             transition: all 1s;
             border-radius:50%;
             -webkit-border-radius:50%;
+            -o-border-radius:50%;
+            -moz-border-radius:50%;
             box-shadow: 0px 0px 15px 15px #1f415b;
             -webkit-box-shadow: 0px 0px .5em .5em #1f415b;
+            -o-box-shadow: 0px 0px .5em .5em #1f415b;
+            -moz-box-shadow: 0px 0px .5em .5em #1f415b;
             transform: rotate(360deg);
             -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
         }
     }
     .socialMedia{
@@ -201,13 +216,25 @@ footer{
         border-radius: 10pt;
         background: white;
         box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+        -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+        -o-box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+        -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
         text-align: center;
+        -moz-transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+        -o-transition: 0.5s ease;
         transition: 0.5s ease;
         @include margin__Espaciado(2em,2em);
         cursor: pointer;
         &:hover {
+        -webkit-transform: scale(1.15);
+        -o-transform: scale(1.15);
+        -moz-transform: scale(1.15);
         transform: scale(1.15);
         box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+        -o-box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+        -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
         }
 }
 .contenedor__CardsServ__card-h3{
@@ -268,6 +295,9 @@ footer{
 .section__index__article-img{
     width: 90%;
     &:hover{
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all .2s;
         width: 100%;
     }
@@ -330,8 +360,14 @@ footer{
 .blog__section__publicaciones__containerIMG-IMG{
     width: 100%;
     height: 100%;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
     &:hover{
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
         transform: scale(1.2);
         cursor: pointer;
     }
@@ -395,6 +431,9 @@ footer{
 .blog__section__contenedor__article-ContainerImg-img{
     width: 90%;
     &:hover{
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all .2s;
         width: 100%;
     }
@@ -424,12 +463,24 @@ footer{
     width: 14rem;
     height: 20rem;
     @include margin__Espaciado(1em,2em);
+    -webkit-perspective: 1000px;
+    -o-perspective: 1000px;
+    -moz-perspective: 1000px;
     perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     &:hover > .front__flip{
+        -webkit-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
         transform: rotateY(-180deg);
     }
     &:hover > .back__flip{
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
 }
@@ -441,21 +492,48 @@ footer{
     align-items: center;
     width: 100%;
     height: 100%;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
     border-radius: 20px;
+    -webkit-backdrop-filter: blur(30px);
+    -o-backdrop-filter: blur(30px);
+    -moz-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
+    -webkit-box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
+    -o-box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
+    -moz-box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
     box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
     color: black;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
     transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -moz-transition: 1.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: 1.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: 1.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: 1.5s cubic-bezier(0.4, 0.2, 0.2, 1);  
     overflow: auto;
 }
 .front__flip{
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
     transform: rotateY(0deg);
     padding: 10px;
 }
 .back__flip{
+    -webkit-transform: rotateY(100deg);
+    -moz-transform: rotateY(100deg);
+    -o-transform: rotateY(100deg);
     transform: rotateY(180deg);
     padding: .5em;
 }
@@ -511,7 +589,10 @@ footer{
     @include margin__Espaciado(1em,1em);
     width: 90%;
     border-radius: 20px;
-    box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
+    
+    -moz-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     justify-content: space-evenly;
     padding: .5em;
@@ -566,6 +647,9 @@ ol{
     width: 90%;
     height: 90%;
     &:hover{
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all .2s;
         width: 100%;
         height: 100%;
@@ -632,6 +716,9 @@ ol{
 .ubicacion__articleContacto__img{
     width: 90%;
     &:hover{
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all .2s;
         width: 100%;
     }
@@ -647,6 +734,9 @@ ol{
 .section__formulario{
     border-radius: 20px;
     box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 1px 5px 20px;
+    -moz-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: 2.5s cubic-bezier(0.4, 0.2, 0.2, 1);
     width: 80%;
     @include flex__ColumnCenterAll;
@@ -666,6 +756,16 @@ ol{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.form-ajustes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.section__formulario__contenedor__form-input{
+    border-style: none;
+    box-shadow: rgba(0.5, 0.4, 0.8, 0.6) 5px 2px 20px;
 }
 .section__formulario__contenedor__h3{
     text-align: left;
@@ -695,6 +795,9 @@ ol{
     @include margin__Espaciado(1em,1em);
     color: map-get($map: $colores, $key: color-titulos1);
     &:hover{
+        -moz-transition: all .2s;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
         transition: all 2s;
         background-color: map-get($map: $backgrounds, $key: backgraund1);
         border-radius: 5pt;
@@ -919,10 +1022,10 @@ ol{
     //Cierra Media Main Nosotros +768px
     //abre 'contacto' +768px
     .section__formulario__contenedor__form{
-        align-items: baseline;
+        align-items:baseline;
     }
     .section__formulario__contenedor__form-input{
-        width: 18rem;
+        width: 20rem;
     }
     .section__Contacto__Ubicacion{
         flex-direction: row;
