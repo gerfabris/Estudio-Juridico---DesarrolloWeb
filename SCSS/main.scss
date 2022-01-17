@@ -957,6 +957,15 @@ ol{
         margin-left: 1em;
         margin-right: 2em;
     }
+    .delay-1{
+        @include delay-1;
+    }
+    .delay-2{
+        @include delay-2;
+    }
+    .delay-3{
+        @include delay-3;
+    }
     // cierra CardsServ 'Index' +768px
     //Abre Sección Servicios 'index' +768px
     .section__Index__servicios {

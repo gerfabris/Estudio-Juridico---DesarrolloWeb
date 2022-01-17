@@ -1086,6 +1086,27 @@ ol ul {
     margin-right: 2em;
   }
 
+  .delay-1 {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+  }
+
+  .delay-3 {
+    animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+  }
+
   .section__Index__servicios {
     display: flex;
     flex-direction: column;
