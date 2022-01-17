@@ -17,6 +17,7 @@
     <!-- link CSS-->
     <link rel="stylesheet" href="../CSS/main.css">
     <!-- Tipografía-->
+    <link rel="preload" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -104,7 +105,7 @@
                         <img src="../assets/img/blog/vacunas_covid.png" class="card-img-top blog__section__publicaciones__containerIMG-IMG" alt="Foto Germán Fabris">
                     </div>
                     <div class="blog__section__publicaciones-body">
-                        <h5 class="card-title blog__section__publicaciones-cardTitle">VacunasVip ¿Escándalo evitable?</h5>
+                        <h2 class="h5 card-title blog__section__publicaciones-cardTitle">VacunasVip ¿Escándalo evitable?</h2>
                         <a href="https://www.linkedin.com/in/german-fabris-1054331b8/" class="blog__section__publicaciones-a"><p class="card-text blog__section__publicaciones-cardText">Por Germán Fabris</p></a>
                         <a href="https://ggerfabris.medium.com/vacunasvip-esc%C3%A1ndalo-evitable-3bf2c6cc35ae" class="btn blog__section__publicaciones__boton">Ver artículo</a>
                     </div>
@@ -117,7 +118,7 @@
                         <img src="../assets/img/blog/nft.png" class="card-img-top blog__section__publicaciones__containerIMG-IMG" alt="Foto Germán Fabris">
                     </div>
                     <div class="blog__section__publicaciones-body">
-                        <h5 class="card-title blog__section__publicaciones-cardTitle">ASPECTOS ESENCIALES DE LOS NFT</h5>
+                        <h2 class="h5 card-title blog__section__publicaciones-cardTitle">ASPECTOS ESENCIALES DE LOS NFT</h2>
                         <a href="https://www.linkedin.com/in/german-fabris-1054331b8/" class="blog__section__publicaciones-a"><p class="card-text blog__section__publicaciones-cardText">Por Germán Fabris</p></a>
                         <a href="https://ggerfabris.medium.com/aspectos-esenciales-de-los-nft-c6e0c26b98ad" class="btn blog__section__publicaciones__boton">Ver artículo</a>
                     </div>
@@ -130,7 +131,7 @@
                         <img src="../assets/img/blog/sociedad-anonima.png" class="card-img-top blog__section__publicaciones__containerIMG-IMG" alt="Foto Germán Fabris">
                     </div>
                     <div class="blog__section__publicaciones-body">
-                        <h5 class="card-title blog__section__publicaciones-cardTitle">Diferencias entre S.A. y S.R.L.</h5>
+                        <h2 class="h5 card-title blog__section__publicaciones-cardTitle">Diferencias entre S.A. y S.R.L.</h2>
                         <a href="https://www.linkedin.com/in/german-fabris-1054331b8/" class="blog__section__publicaciones-a"><p class="card-text blog__section__publicaciones-cardText">Por Germán Fabris</p></a>
                         <a href="https://drive.google.com/file/d/1PfsMJinT1wewkzuTsszZAJ6O9I3ZULpt/view?usp=sharing" class="btn blog__section__publicaciones__boton">Ver artículo</a>
                     </div>
@@ -141,17 +142,17 @@
         <!-- Abre Sección Formulario - Ir a contacto-->
         <section id="formulario-contacto" class="container blog__section__contenedor">
             <!-- Abre form sugerencias-->
-            <form class="blog__section__contenedor__formulario" action="servidor.php" method="post" enctype="">
+            <form class="blog__section__contenedor__formulario" action="https://formspree.io/f/mlezgndo" method="POST" enctype="">
                 <div class="container">
                     <form class="form-config" action="servidor.php" method="post" enctype="">
-                    <h2 class="h2 blog__section__contenedor__formulario-h2">Sugerencias</h2>
+                    <h3 class="h2 blog__section__contenedor__formulario-h2">Sugerencias</h3>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="ejfabrisfernandezlafi@egmail.com">
+                        <input type="email" name="_replyto" class="form-control" id="email" placeholder="ejfabrisfernandezlafi@egmail.com">
                     </div>
                     <div class="mb-3">
                         <label for="sugerencias" class="form-label">¿Sobre qué te gustaría ver publicaciones? Cuéntanos</label>
-                        <textarea class="form-control" id="sugerencias" rows="3"></textarea>
+                        <textarea class="form-control" name="message" id="sugerencias" rows="3"></textarea>
                         <button type="submit" class="btn blog__section__publicaciones__boton separador-leve">Enviar Consulta</button>
                     </div>
                     </form>
@@ -160,7 +161,7 @@
             <!-- Cierra Forms Sugerencias-->
             <!-- Abre ir a contacto -->
             <article id="contacto" class="container blog__section__contenedor__article">
-                <h2 class="h2 blog__section__contenedor__article-h2 wow animate__animated animate__fadeInLeft">Haz tu consulta</h2>
+                <h4 class="h2 blog__section__contenedor__article-h2 wow animate__animated animate__fadeInLeft">Haz tu consulta</h4>
                 <div class="blog__section__contenedor__article-ContainerImg">
                     <a href="./pages/contacto.html">
                         <img class="blog__section__contenedor__article-ContainerImg-img" src="../assets/icons/secciones/contacto.png" alt="Haz tu consulta">

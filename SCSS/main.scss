@@ -7,6 +7,10 @@ body{
     height: 100%;
     box-sizing: border-box;
 }
+@font-face{
+    font-family: 'DM Sans', sans-serif;
+    font-display: swap;
+}
 // Mobile First Responsive 320px 528px a 768px = MF
 //Grillas Grid distribuidas para posible edición futura
 //Responsive MF 'Index'
@@ -190,8 +194,21 @@ footer{
 //Abre config main 'index' MF
 .main__Index{
     @extend .main;
+
 }
 //Cierra config main 'index' 
+//particles
+#particles-js{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    max-height: 150px;
+}
+//Abre carousel 'index' +1200px
+.carousel__banner{
+    position: relative;
+    z-index: 99%;
+}
 //Abre section servicios 'index' MF
 .section__Index__servicios{
     @extend .flex__ColumnCenterAll;
@@ -855,6 +872,9 @@ ol{
 //'index' +360px
 @media screen and (min-width: 360px){
     //index
+    #particles-js{
+        max-height: 170px;
+    }
     .contenedor__CardsServ__card{
         width: 18rem;
         height: 23rem;
@@ -892,6 +912,9 @@ ol{
     .header__containerLogo{
         max-width: 50%;
     }
+    #particles-js{
+        max-height: 220px;
+    }
 }
 //CIerra MediaQuerie Responsive Screen +500px
 //MediaQuerie Responsive Screen +768px
@@ -908,6 +931,9 @@ ol{
     //cierre nav header all pages +768px
     //abre Main 'index' +768px
     //Abre carousel 'index' +768px
+    #particles-js{
+        max-height: 350px;
+    }
     .carousel__banner{
         @include carousel;
     }
@@ -1071,6 +1097,9 @@ ol{
 @media screen and (min-width: 992px){
     //abre Main 'index' +992px
     //Abre carousel 'index' +992px
+    #particles-js{
+        max-height: 400px;
+    }
     .carousel__banner{
         max-height: 400px;
     }
@@ -1116,14 +1145,18 @@ ol{
     .container__logo{
         max-width: 50%;
         width: 35%;
-        margin-right: 10em
+        margin-right: 10em;
     }
     //Cierra Media +1200 header todas las paginas
     //Abre Media Main Index +1200px
+    #particles-js{
+        max-height: 450px;
+    }
     //Abre carousel 'index' +1200px
     .carousel__banner{
         max-height: 450px;
         max-width: 80%;
+        width: 75%;
     }
     .carousel__banner__slide{
         max-height: 450px;

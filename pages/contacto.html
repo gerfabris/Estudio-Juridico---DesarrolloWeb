@@ -17,6 +17,7 @@
     <!-- link CSS-->
     <link rel="stylesheet" href="../CSS/main.css">
     <!-- Tipografía-->
+    <link rel="preload" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -96,12 +97,12 @@
         <!-- Cierra Banner-->
         <!-- Abre Formulario-->
         <section id="formularioContacto" class="container section__formulario"">
-            <form class="section__formulario__contenedor" action="servidor.php" method="post" enctype="">
+            <form class="section__formulario__contenedor" action="https://formspree.io/f/mlezgndo" method="POST" enctype="">
                 <div class=" section__formulario__contenedor-1">
                     <h2 class="h2 section__formulario__contenedor__h2">Datos de Contacto</h2>
                     <div class="section__formulario__contenedor__form">
                         <div class="mb-3 separador-leve form-ajustes">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" name="_replyto" class="form-label">Email</label>
                             <input class="section__formulario__contenedor__form-input" type="email" name="mail" placeholder="Ejemplo: ejfabrisfernándezlafi@gmail.com" id="correo" required><br>
                         </div>
                         <div class="mb-3 separador-leve form-ajustes">
@@ -137,8 +138,8 @@
                     <option value="otro">Otro</option>
                 </select>
                 <div class="mb-3 separador-leve">
-                    <label for="consulta" class="form-label">¿Sobre qué te gustaría ver publicaciones? Cuéntanos</label>
-                    <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                    <label for="consulta" class="form-label">¿En qué podemos ayudarte? Cuéntanos</label>
+                    <textarea class="form-control" name="message" id="mensaje" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn section__formulario__contenedor__boton separador-leve">Enviar Consulta</button>
                 </div>              

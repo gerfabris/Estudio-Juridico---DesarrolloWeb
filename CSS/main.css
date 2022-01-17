@@ -35,6 +35,10 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "DM Sans", sans-serif;
+  font-display: swap;
+}
 #grilla__Index {
   display: grid;
   height: 100%;
@@ -180,6 +184,18 @@ footer div a:hover {
 .footer__copyright {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  max-height: 150px;
+}
+
+.carousel__banner {
+  position: relative;
+  z-index: 99%;
 }
 
 .section__Index__servicios {
@@ -962,6 +978,10 @@ ol ul {
 }
 
 @media screen and (min-width: 360px) {
+  #particles-js {
+    max-height: 170px;
+  }
+
   .contenedor__CardsServ__card {
     width: 18rem;
     height: 23rem;
@@ -998,6 +1018,10 @@ ol ul {
   .header__containerLogo {
     max-width: 50%;
   }
+
+  #particles-js {
+    max-height: 220px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header__containerLogo {
@@ -1007,6 +1031,10 @@ ol ul {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  #particles-js {
+    max-height: 350px;
   }
 
   .carousel__banner {
@@ -1212,6 +1240,10 @@ ol ul {
   }
 }
 @media screen and (min-width: 992px) {
+  #particles-js {
+    max-height: 400px;
+  }
+
   .carousel__banner {
     max-height: 400px;
   }
@@ -1262,9 +1294,14 @@ ol ul {
     margin-right: 10em;
   }
 
+  #particles-js {
+    max-height: 450px;
+  }
+
   .carousel__banner {
     max-height: 450px;
     max-width: 80%;
+    width: 75%;
   }
 
   .carousel__banner__slide {
