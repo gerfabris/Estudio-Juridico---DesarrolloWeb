@@ -73,6 +73,17 @@ body{
     "main"
     "footer";
 }
+#grilla__termycond{
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    gap: .1em;
+    //Posición áreas
+    grid-template-areas: 
+    "header "
+    "main"
+    "footer";
+}
 //Cierra grillas grid
 //Configuraciones all pages
 //Abre header index and all pages

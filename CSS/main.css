@@ -79,6 +79,14 @@ body {
   grid-template-areas: "header " "main" "footer";
 }
 
+#grilla__termycond {
+  display: grid;
+  height: 100%;
+  width: 100vw;
+  gap: 0.1em;
+  grid-template-areas: "header " "main" "footer";
+}
+
 header {
   width: 100vw;
   height: 2%;
