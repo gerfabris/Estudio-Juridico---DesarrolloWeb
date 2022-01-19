@@ -141,20 +141,16 @@
         <!-- Abre Sección Formulario - Ir a contacto-->
         <section id="formulario-contacto" class="container blog__section__contenedor">
             <!-- Abre form sugerencias-->
-            <form class="blog__section__contenedor__formulario" action="https://formspree.io/f/mlezgndo" method="POST" enctype="">
-                <div class="container">
-                    <form class="form-config" action="servidor.php" method="post" enctype="">
-                    <h3 class="h2 blog__section__contenedor__formulario-h2">Sugerencias</h3>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="_replyto" class="form-control" id="email" placeholder="ejfabrisfernandezlafi@egmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="sugerencias" class="form-label">¿Sobre qué te gustaría ver publicaciones? Cuéntanos</label>
-                        <textarea class="form-control" name="message" id="sugerencias" rows="3"></textarea>
-                        <button type="submit" class="btn blog__section__publicaciones__boton separador-leve">Enviar Consulta</button>
-                    </div>
-                    </form>
+            <form class="blog__form__sugerencias" action="https://formspree.io/f/mlezgndo" method="POST" enctype="">
+                <h3 class="h2 blog__form__sugerencias-h2">Sugerencias</h3>
+                <div class="container blog__form__sugerencias__contenedor-1">
+                    <label for="email" class="form-label ">Email</label>
+                    <input type="email" name="_replyto" class="blog__form__sugetencias__input" id="email" placeholder="ejfabrisfernandezlafi@egmail.com">
+                </div>
+                <div class="container blog__form__sugerencias__contenedor-2">
+                    <label for="sugerencias" class="form-label">¿Sobre qué te gustaría ver publicaciones?</label>
+                    <textarea class="form-control" name="message" id="sugerencias" rows="3" placeholder="Cuéntanos aquí"></textarea>
+                    <button type="submit" class="btn blog__section__publicaciones__boton separador-leve">Enviar Consulta</button>
                 </div>
             </form>   
             <!-- Cierra Forms Sugerencias-->
